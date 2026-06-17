@@ -571,14 +571,14 @@ export default function StudentDashboard({ user, notifications, fetchNotificatio
             <div style={{ backgroundColor: 'var(--bg-primary)', padding: '16px', borderRadius: 'var(--radius-md)', textAlign: 'center', border: '1px solid var(--border-color)' }}>
               <p style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '8px' }}>Scan to Pay</p>
               
-              {/* Dynamically generate QR code using standard qrserver API */}
+              {/* Payment QR code image copied to public/payment_qr.jpg */}
               <img 
-                src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=mentorium.eduhub@gmail.com%26pn=MentoriumEduHub%26am=${selectedPackage.price}%26cu=INR`} 
+                src="/payment_qr.jpg" 
                 alt="Payment QR Code" 
-                style={{ width: '160px', height: '160px', borderRadius: 'var(--radius-sm)', border: '4px solid white', boxShadow: 'var(--shadow-sm)', marginBottom: '12px' }}
+                style={{ width: '180px', height: 'auto', borderRadius: 'var(--radius-sm)', border: '4px solid white', boxShadow: 'var(--shadow-sm)', marginBottom: '12px' }}
               />
               
-              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>UPI ID: <strong>mentorium.eduhub@gmail.com</strong></p>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>UPI ID: <strong>docthor.srm@okicici</strong></p>
               <h3 style={{ color: 'var(--brand-primary)', marginTop: '8px' }}>INR {selectedPackage.price}</h3>
             </div>
 
